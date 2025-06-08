@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    select, input[type="checkbox"] {
+      margin-bottom: 10px;
+    }
+    .shortcut {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .shortcut label {
+      margin: 0;
+      flex: 1;
+    }
+    .shortcut select {
+      flex: 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Recording Options</h1>
+  <form id="optionsForm">
+    <label for="resolution">Resolution:</label>
+    <select id="resolution">
+      <option value="1080p">1080p</option>
+      <option value="720p">720p</option>
+      <option value="480p">480p</option>
+    </select>
+    
+    <label for="audio">Record Audio:</label>
+    <input type="checkbox" id="audio">
+    
+    <label>File Formats:</label>
+    <label><input type="checkbox" name="formats" value="mp4"> MP4</label>
+    <label><input type="checkbox" name="formats" value="avi"> AVI</label>
+    <label><input type="checkbox" name="formats" value="mkv"> MKV</label>
+    <label><input type="checkbox" name="formats" value="mov"> MOV</label>
+    
+    <div class="shortcut">
+      <label for="startShortcut">Start Recording Shortcut:</label>
+      <select id="startShortcut">
+        <option value="Ctrl+Shift+S">Ctrl+Shift+S</option>
+        <option value="Ctrl+Shift+A">Ctrl+Shift+A</option>
+        <option value="Ctrl+Shift+D">Ctrl+Shift+D</option>
+        <option value="Ctrl+Shift+F">Ctrl+Shift+F</option>
+      </select>
+    </div>
+    <div class="shortcut">
+      <label for="stopShortcut">Stop Recording Shortcut:</label>
+      <select id="stopShortcut">
+        <option value="Ctrl+Shift+E">Ctrl+Shift+E</option>
+        <option value="Ctrl+Shift+Q">Ctrl+Shift+Q</option>
+        <option value="Ctrl+Shift+W">Ctrl+Shift+W</option>
+        <option value="Ctrl+Shift+R">Ctrl+Shift+R</option>
+      </select>
+    </div>
+    
+    <button type="submit">Save Options</button>
+  </form>
+  <script src="options.js"></script>
+</body>
+</html>
